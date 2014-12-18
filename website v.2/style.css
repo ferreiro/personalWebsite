@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'jorgeIcons';
-	src:url('static/fonts/jorgeIcons.eot?53eff7');
-	src:url('static/fonts/jorgeIcons.eot?#iefix53eff7') format('embedded-opentype'),
-		url('static/fonts/jorgeIcons.woff?53eff7') format('woff'),
-		url('static/fonts/jorgeIcons.ttf?53eff7') format('truetype'),
-		url('static/fonts/jorgeIcons.svg?53eff7#jorgeIcons') format('svg');
+	src:url('static/fonts/jorgeIcons.eot?-dugqji');
+	src:url('static/fonts/jorgeIcons.eot?#iefix-dugqji') format('embedded-opentype'),
+		url('static/fonts/jorgeIcons.woff?-dugqji') format('woff'),
+		url('static/fonts/jorgeIcons.ttf?-dugqji') format('truetype'),
+		url('static/fonts/jorgeIcons.svg?-dugqji#jorgeIcons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,24 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-contactme:before {
+	content: "\e609";
+}
+.icon-quotes-left:before {
+	content: "\e977";
+}
+.icon-quotes-right:before {
+	content: "\e978";
+}
+.icon-close:before {
+	content: "\e608";
+}
+.icon-spotify:before {
+	content: "\e606";
+}
+.icon-youtube-play:before {
+	content: "\e604";
+}
 .icon-instagram:before {
 	content: "\e607";
 }
@@ -47,24 +65,15 @@
 .icon-contact:before {
 	content: "\e600";
 }
-.icon-quotes-left:before {
-	content: "\e977";
-}
-.icon-quotes-right:before {
-	content: "\e978";
-}
-
-
 
 
 body
 { 
 	margin: 0;
 	padding: 0;
-	font-size: 18px;
+	font-size: 18px; 
 	font-family: "Roboto"; 
-	background: #ecf0f1;  
-	background: #145b89; 
+	background: #ecf0f1;   
 }
 article, section, ul, li {
 	margin: 0;
@@ -88,8 +97,77 @@ h1, h2, h3, h4, h5, a, p
 	display: inline-block;
 	background: rgba(236, 240, 241,0.8);
 }
+.blur {
+	-webkit-filter: blur(5px) !important;
+	-moz-filter: blur(5px) !important;
+	-o-filter: blur(5px) !important;
+	-ms-filter: blur(5px) !important;
+	filter: blur(5px) !important ;
+}
+.modal {
 
+	width: 100%;
+	height: 100%; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 120;
+	background: rgba(41,128,185, 0.9);  
+	display: none;
+}
+.modalClose {
+	width: 60px;
+	height: 60px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #f4f4f4;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	cursor: pointer;
+}
+.modalClose:before {
+	font-size: 40px;
+	color: rgba(41,128,185, 0.9);
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+.modalContact {
+	width: 400px;
+	height: 400px;
+	display: none;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #f4f4f4;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px;  
+}
 
+.modalProfileZoom {
+	width: 400px;
+	height: 400px;
+	display: none;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #f4f4f4;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px; 
+	background: url(static/images/avatar.jpg) no-repeat;
+	background-size: cover;
+}
+
+/** Panel wrap **/
 .panelWrap {
 	width: 100%;
 	background-size: cover;
@@ -113,7 +191,7 @@ h1, h2, h3, h4, h5, a, p
 	display: none;
 } 
 .panelBackground {
-	background: #f4f4f4 url(https://pbs.twimg.com/profile_banners/788065790/1412711874/1500x500);
+	background: #f4f4f4 url(static/images/background.jpg);
 	background-size: cover;
 }
 .panel { 
@@ -127,7 +205,7 @@ h1, h2, h3, h4, h5, a, p
 	padding: 0;
 	margin: 0;
 	display: inline-block;
-	background: url(https://pbs.twimg.com/profile_images/537980583385636865/UIYgmEH-.jpeg) no-repeat;
+	background: url(static/images/avatar.jpg) no-repeat;
 	background-size: cover;
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
@@ -170,7 +248,13 @@ h1, h2, h3, h4, h5, a, p
 	font-size: 2.5em;
 	font-weight: 500; 
 	text-align: left;
+	font-family: "Roboto"; 
 }
+.panelBioHeadline:before,
+.panelBioHeadline:after {
+	content: "-";
+} 
+
 .panelBioHeadline { 
 	color: rgba(236, 240, 241,0.8);
 	font-size: 1.2em;
@@ -179,12 +263,13 @@ h1, h2, h3, h4, h5, a, p
 	margin-bottom: 1em;
 }
 .panelBioText { 
-	width: 220px;
+	width: 280px;
 	color: rgba(236, 240, 241,0.7);
 	font-size: 1.2em;
 	font-weight: 300;
 	margin-bottom: 1.3em;
-	text-align: justify;
+	text-align: center;
+	
 }
 .panelBioLink {
 	width: 220px;
@@ -219,7 +304,15 @@ h1, h2, h3, h4, h5, a, p
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
+	position: relative;
 } 
+.panelNetworks ul li a {
+	width: 100%;
+	height: 100%;
+	float: left; 
+	position: absolute;
+	left: 0;
+}
 .panelNetworks ul li:before {
 	font-size: 30px;
 	color: #e6faff;
@@ -252,6 +345,7 @@ h1, h2, h3, h4, h5, a, p
 	font-weight: 500;
 	line-height: 0;
 	color: #093756;
+	color: #6c9bb9;
 	margin-right: 10px;
 }
 .footerProjects ul {
@@ -295,7 +389,12 @@ h1, h2, h3, h4, h5, a, p
 	background: none repeat scroll 0% 0% rgba(36, 152, 85, 1);
 }
 
+
+
 @media all and (min-width: 1010px) {
+	body {
+		background: #145b89; 
+	}
 	.panelWrap {
 		position: absolute;
 		top: 0;
@@ -306,12 +405,12 @@ h1, h2, h3, h4, h5, a, p
 	}
 	.panel {
 		width: 500px;
-		height:510px;  
+		height:535px;   
 		margin: 0 auto; 
 		padding: 0;
 		position: absolute; 
 		top: 50%; 
-		margin-top: -255px;
+		margin-top: -295px;
 		left: 50%;
 		margin-left: -250px;
 	}
@@ -330,6 +429,11 @@ h1, h2, h3, h4, h5, a, p
 	.footer { 
 		vertical-align: middle;
 	}  
+	.footerProjects p {
+		color: #0f3751;
+		color: rgba(108, 155, 185, 1);
+		color: #6c9bb9;
+	}
 	.contact {
 		float: right;
 	} 

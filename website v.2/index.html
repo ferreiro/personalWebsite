@@ -3,18 +3,31 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700">	
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
+	<section class="modal">
+		<div class="modalContact">
+			<div class="modalClose icon-close"></div>
+
+			<a href="mailto:jorge@ferreiro.me?subject=contacto%20desde%20jorge.ferreiro">jorge@ferreiro.me</a>
+
+		</div>
+		<div class="modalProfileZoom">
+			<div class="modalClose icon-close"></div>
+		</div>
+	</section>
+ 
 	<div class="panelWrap"> 
 		<div class="panelBackground"></div>
 		<div class="panelBackgroundSolid"></div>
 		<section class="panel"> 
 			<article class="panelAvatar"> 
-				<a href="#" class="panelAvatarLink"></a> 
+				<a href="#" id="openPhoto" class="panelAvatarLink"></a> 
 			</article>
 			<article class="panelBio">
 				<h1 class="panelBioName">
@@ -26,12 +39,12 @@
 				</h2>
 				<div class="separator"></div>
 				<p class="panelBioText">
-					<span>#Tech</span> is my passion<br />
-					I love create projects<br />
-					Computer Engineering is my career.</br>
+					<span class="icon-quotesLeft"></span>
+					Technology is my passion. I love create projects. I study Computer Engineering
+					<span class="icon-quotesRight"></span>
 				</p>
 				<div class="separator"></div>
-				<a href="" class="panelBioLink">
+				<a href="#" id="openContact" class="panelBioLink">
 					Send me a line
 				</a>
 			</article>
@@ -45,7 +58,7 @@
 						<a href="https://www.linkedin.com/profile/view?id=266672288" target="_blank"></a>
 					</li>
 
-					<li class="icon-contact">
+					<li class="icon-contactme">
 						<a href="https://www.instagram.com/jorgeferreiro" target="_blank"></a>
 					</li> 
 				</ul>
@@ -56,7 +69,7 @@
 	<footer class="footerWrap">
 		<div class="footer">
 			<section class="footerProjects">
-				<p>My projects</p>
+				<p>My projects:</p>
 				<ul>
 					<li style="background-image:url(static/images/m4d_footer.png);">
 						<a href="http://music4deejays.com/" target="_blank"></a>
@@ -74,6 +87,17 @@
  
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.9.2'></script> 
 	<script src='static/js/effects.js'></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-57822706-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 </body>
 
