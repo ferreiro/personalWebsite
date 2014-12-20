@@ -19,20 +19,23 @@
  		$('.modal div').hide(0);
  		$('.modalProfileZoom').fadeIn(0);
  		$('.panelWrap').addClass("blur");
+ 		$('.footerWrap').addClass("blur");
  		return false;
  	});
  	
- 	$('#openContact').click(function() { 
+ 	$('.openContact').click(function() { 
  		$('.modal').fadeIn(0);
  		$('.modal div').hide(0);
  		$('.modalContact').fadeIn(0);
  		$('.panelWrap').addClass("blur");
+ 		$('.footerWrap').addClass("blur");
  		return false;
  	});
 
  	$('.modalClose').click(function() { 
  		$('.modal').hide(0); 
  		$('.panelWrap').removeClass("blur");
+ 		$('.footerWrap').removeClass("blur");
  		$('.modalProfileZoom').hide(0);
  	});
 
