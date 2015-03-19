@@ -286,11 +286,20 @@ h3 {
 		left: 0;
 	}
 	.leftPanel {
-		padding: 0 7em; 
-	}
+		width: 515px;
+		padding: 0 6.8em; 
+	} 
+	.leftPanelInt {
+		width: 302px; 
+		height: 430px; /* 430 / 2 = 215 */
+		position: absolute;
+		top: 50%;
+		margin-top: -215px; 
+	} 
 	.leftPanelLogo { 
 		background: none;
-		margin-top: 4em;
+		/* margin-top: 4em; */
+		 margin-top: 0; 
 	}
 	.leftPanelLogo h1 a {
 		padding: 0;
