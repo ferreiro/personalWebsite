@@ -152,6 +152,7 @@ h3 {
 .leftPanelLogo {
 	width: 100%;
 	min-height: 70px;
+	margin-bottom: 1em;
 	display: block;
 	background: rgba(12, 26, 30, 0.65); 
 	background: rgba(255, 255, 255, 0.65); 
@@ -181,7 +182,7 @@ h3 {
 }
 .leftPanelBio li p {
 	color: #4e4e4e;
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 .leftPanelMail {
 	margin: 1em;
@@ -192,10 +193,11 @@ h3 {
 	color: #002b3a; /* color: #9ae0f3; color: #f9cfcf; */
 	font-size: 1.4em;
 	cursor: pointer;
-	padding: 1em;
+	padding: 1em; 
 	display: block;
-	-webkit-tap-highlight-color: rgba(251, 185, 250, 0.9);
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	background: rgba(0,0,0,0.24);
+	background: rgba(0,0,0,0.07);
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	border-radius: 100px;
@@ -222,19 +224,13 @@ h3 {
 	font-size: 35px;  
 	display: block;
 	padding: 1em 0; 
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
 }
 .footer { 
 	text-align: center;
 	padding: 15px 0;
 	color: rgba(255,255,255,0.6);
 }
-
-@media all and (max-width:1000px) {
-	.backgroundImage {
-		/* margin-top: -200px !important; */
-	}
-}
-
 
 @media all and (min-width: 370px) and (max-width: 584px) {
 	.backgroundImage { 
@@ -255,6 +251,7 @@ h3 {
 	}
 	.leftPanelMail a { 
 		font-size: 1.7em;
+		margin:0 2em;
 	}
 	.backgroundImage { 
 		background-image: url(../images/w_full.jpg);
@@ -267,6 +264,22 @@ h3 {
 		height: 450px;
 	} 
 }
+
+@media all and (max-width:1000px) {
+	.leftPanel {
+		background: rgba(255,255,255, 0.9);
+	}
+	.leftPanelBio {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		/* padding: 6px 0; */
+	}
+	.backgroundImage {
+		/* margin-top: -200px !important; */
+	}
+}
+
 
 /*
 @media all and (max-height: 650px) {
@@ -295,17 +308,22 @@ h3 {
 		position: absolute;
 		padding: 0 6.8em; 
 	} 
+	.leftPanelMail a {
+		margin: 0;
+	}
 	.leftPanelInt {
 		width: 302px; 
-		height: 430px; /* 430 / 2 = 215 */
 		position: absolute;
 		top: 50%;
-		margin-top: -215px; 
+		height: 470px; /* 430 / 2 = 215 */
+		margin-top: -215px;
 	} 
+
 	.leftPanelLogo { 
 		background: none;
 		/* margin-top: 4em; */
 		 margin-top: 0; 
+		 margin-bottom: 0; 
 	}
 	.leftPanelLogo h1 a {
 		padding: 0;
